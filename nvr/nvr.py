@@ -74,7 +74,7 @@ class Nvr():
             '''))
 
         args = os.environ.get('NVR_CMD')
-        args = args.split(' ') if args else ['nvim']
+        args = args.split(' ') if args else ['lvim']
         args.extend(['--listen', self.address])
 
         multiprocessing.Process(target=self.try_attach, args=(args[0], nvr, options, arguments)).start()
